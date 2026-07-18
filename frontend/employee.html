@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Details</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Employee Details</h1>
+
+        <div class="search-box">
+
+            <label for="employeeId">Employee ID</label>
+
+            <input
+                type="text"
+                id="employeeId"
+                placeholder="Enter Employee ID">
+
+            <button id="searchBtn">
+                Get Employee
+            </button>
+
+        </div>
+
+        <div id="employeeCard" style="display:none;">
+
+            <h2>Employee Information</h2>
+
+            <p><strong>Name:</strong> <span id="name"></span></p>
+
+            <p><strong>Email:</strong> <span id="email"></span></p>
+
+            <p><strong>Department:</strong> <span id="department"></span></p>
+
+            <p><strong>Role:</strong> <span id="role"></span></p>
+
+            <p><strong>Joining Date:</strong> <span id="joiningDate"></span></p>
+
+            <p><strong>Status:</strong> <span id="status"></span></p>
+
+            <p><strong>Workflow Stage:</strong> <span id="workflowStage"></span></p>
+
+        </div>
+
+    </div>
+
+    <script src="employee.js"></script>
+
+</body>
+</html>
