@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management Dashboard</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+    <header>
+        <h1>Employee Management Dashboard</h1>
+        <p>Smart Employee Onboarding & Identity Service</p>
+    </header>
+
+    <main>
+        <!-- Dashboard Cards -->
+        <section class="cards">
+            <div class="card">
+                <h2 id="totalEmployees">0</h2>
+                <p>Total Employees</p>
+            </div>
+            <div class="card">
+                <h2 id="pendingEmployees">0</h2>
+                <p>Pending</p>
+            </div>
+            <div class="card">
+                <h2 id="approvedEmployees">0</h2>
+                <p>Approved</p>
+            </div>
+            <div class="card">
+                <h2 id="rejectedEmployees">0</h2>
+                <p>Rejected</p>
+            </div>
+        </section>
+
+        <!-- Search -->
+        <section class="search-section">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search employee by name or email..."
+            >
+        </section>
+
+        <!-- Employee Table -->
+        <section class="table-section">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Department</th>
+                        <th>Role</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="employeeTableBody">
+                    <!-- Dynamic Rows Rendered by JS -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <!-- Employee Details Modal -->
+    <div id="employeeModal" class="modal">
+        <div class="modal-content">
+            <span id="closeModal">&times;</span>
+            <div id="employeeDetails">
+                <!-- Dynamic Employee Workspace Content Rendered by JS -->
+            </div>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
