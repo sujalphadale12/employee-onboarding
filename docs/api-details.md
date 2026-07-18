@@ -1,29 +1,59 @@
-# Employee Registration API
+# API Documentation
 
-## API Name
-EmployeeOnboardingAPI
+## Employee APIs
 
-## Endpoint
+### Register Employee
+
 POST /employee
 
-## Region
-ap-south-1
+Registers a new employee.
 
-## Response
+---
 
-200 OK
+### Get Employee
 
-{
-  "message": "Employee Created Successfully",
-  "employee_id": "<uuid>"
-}
+GET /employee/{employee_id}
 
-## Flow
+Returns employee details.
 
-Postman / Frontend
-        ↓
-API Gateway
-        ↓
-CreateEmployee Lambda
-        ↓
-DynamoDB
+---
+
+### List Employees
+
+GET /employees
+
+Returns all employees.
+
+---
+
+### Update Employee Status
+
+PUT /employee/{employee_id}/status
+
+Updates employee workflow status.
+
+---
+
+## Document APIs
+
+### Generate Upload URL
+
+POST /upload
+
+Returns a pre-signed upload URL.
+
+---
+
+### Save Metadata
+
+POST /save-document
+
+Stores document metadata in DynamoDB.
+
+---
+
+### Download Document
+
+GET /employee/{employee_id}/document/{document_type}
+
+Returns a pre-signed download URL.
